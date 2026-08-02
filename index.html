@@ -1,195 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1435812891325522');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1435812891325522&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>SANJAY SINGH CRICKET TIPS 🏆</title>
 
-<meta name="description" content="SANJAY SINGH CRICKET TIPS - Cricket match analysis, team updates and pre-match insights. Join our Telegram community.">
+<meta name="description" content="SANJAY SINGH CRICKET TIPS - Cricket match analysis, team updates and pre-match insights.">
 
 <style>
 
 /* =========================
-   RESET
+   RESET + MOBILE BASE
 ========================= */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
 }
 
 html{
-    scroll-behavior:smooth;
+    width:100%;
+    min-height:100%;
+    overflow-x:hidden;
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
+    width:100%;
     min-height:100vh;
     overflow-x:hidden;
-    color:#ffffff;
-
-    background:
-    radial-gradient(circle at 15% 20%, rgba(0,110,255,.20), transparent 30%),
-    radial-gradient(circle at 85% 80%, rgba(255,180,0,.15), transparent 30%),
-    #03050a;
+    font-family:Arial,Helvetica,sans-serif;
+    color:#fff;
+    background:#03050a;
 }
 
 /* =========================
-   ANIMATED BACKGROUND
+   BACKGROUND
 ========================= */
 
 body::before{
     content:"";
     position:fixed;
-    inset:0;
-    z-index:-3;
-
-    background:
-    linear-gradient(
-        120deg,
-        transparent 40%,
-        rgba(255,255,255,.025) 50%,
-        transparent 60%
-    );
-
-    background-size:300% 300%;
-    animation:bgMove 10s linear infinite;
-}
-
-@keyframes bgMove{
-
-    0%{
-        background-position:0% 50%;
-    }
-
-    50%{
-        background-position:100% 50%;
-    }
-
-    100%{
-        background-position:0% 50%;
-    }
-
-}
-
-/* =========================
-   CRICKET BALL ANIMATION
-========================= */
-
-.ball{
-    position:fixed;
-    width:55px;
-    height:55px;
-
-    border-radius:50%;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:-2;
 
     background:
     radial-gradient(
-        circle at 30% 25%,
-        #ff5555,
-        #a40000 65%,
-        #350000
+        circle at 10% 10%,
+        rgba(0,120,255,.18),
+        transparent 30%
+    ),
+    radial-gradient(
+        circle at 90% 90%,
+        rgba(255,190,0,.12),
+        transparent 30%
     );
-
-    box-shadow:
-    0 0 25px rgba(255,0,0,.45);
-
-    opacity:.15;
-    z-index:-1;
-}
-
-.ball::after{
-    content:"";
-    position:absolute;
-
-    width:4px;
-    height:100%;
-
-    background:#ffffff;
-
-    left:50%;
-    top:0;
-
-    transform:
-    translateX(-50%)
-    rotate(35deg);
-
-    opacity:.7;
-}
-
-.ball1{
-    top:15%;
-    left:5%;
-
-    animation:
-    floatBall1
-    8s
-    ease-in-out
-    infinite;
-}
-
-.ball2{
-    bottom:15%;
-    right:5%;
-
-    width:75px;
-    height:75px;
-
-    animation:
-    floatBall2
-    10s
-    ease-in-out
-    infinite;
-}
-
-@keyframes floatBall1{
-
-    0%,100%{
-        transform:
-        translateY(0)
-        rotate(0deg);
-    }
-
-    50%{
-        transform:
-        translateY(-50px)
-        rotate(180deg);
-    }
-
-}
-
-@keyframes floatBall2{
-
-    0%,100%{
-        transform:
-        translateY(0)
-        rotate(0deg);
-    }
-
-    50%{
-        transform:
-        translateY(50px)
-        rotate(-180deg);
-    }
-
 }
 
 /* =========================
-   MAIN CONTAINER
+   CONTAINER
 ========================= */
 
 .container{
     width:100%;
     max-width:1100px;
-
-    margin:auto;
-
-    padding:
-    25px
-    18px
-    45px;
+    margin:0 auto;
+    padding:20px 14px 35px;
 }
 
 /* =========================
@@ -197,62 +96,34 @@ body::before{
 ========================= */
 
 .top-badge{
-
-    width:max-content;
+    display:block;
+    width:fit-content;
     max-width:100%;
+    margin:0 auto 15px;
+    padding:8px 14px;
 
-    margin:
-    0
-    auto
-    18px;
-
-    padding:
-    9px
-    18px;
-
-    border:
-    1px solid
-    rgba(255,215,70,.6);
-
+    border:1px solid rgba(255,210,50,.55);
     border-radius:50px;
 
-    background:
-    rgba(255,193,7,.08);
-
+    background:rgba(255,193,7,.08);
     color:#ffd84a;
 
-    font-size:13px;
-
-    font-weight:bold;
-
-    letter-spacing:1px;
-
     text-align:center;
+    font-size:11px;
+    line-height:1.3;
+    font-weight:800;
+    letter-spacing:.5px;
 
-    box-shadow:
-    0 0 20px
-    rgba(255,193,7,.12);
-
-    animation:
-    badgePulse
-    2s
-    infinite;
+    animation:badgeGlow 2s infinite alternate;
 }
 
-@keyframes badgePulse{
-
-    0%,100%{
-        box-shadow:
-        0 0 10px
-        rgba(255,193,7,.12);
+@keyframes badgeGlow{
+    from{
+        box-shadow:0 0 5px rgba(255,200,0,.15);
     }
-
-    50%{
-        box-shadow:
-        0 0 30px
-        rgba(255,193,7,.40);
+    to{
+        box-shadow:0 0 20px rgba(255,200,0,.4);
     }
-
 }
 
 /* =========================
@@ -260,105 +131,79 @@ body::before{
 ========================= */
 
 .logo-box{
-
+    width:100%;
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
-    margin:
-    10px
-    auto
-    20px;
+    margin:5px auto 14px;
 }
 
 .logo{
-
-    width:
-    min(280px,75vw);
-
+    display:block;
+    width:clamp(180px,58vw,285px);
+    max-width:100%;
     height:auto;
-
     border-radius:50%;
 
     filter:
     drop-shadow(
-    0 0 25px
-    rgba(255,193,7,.30)
+        0 0 18px
+        rgba(255,193,7,.3)
     );
 
-    animation:
-    logoFloat
-    4s
-    ease-in-out
-    infinite;
+    animation:logoAnimation 4s ease-in-out infinite;
 }
 
-@keyframes logoFloat{
-
+@keyframes logoAnimation{
     0%,100%{
-        transform:
-        translateY(0)
-        scale(1);
+        transform:translateY(0);
     }
-
     50%{
-        transform:
-        translateY(-8px)
-        scale(1.02);
+        transform:translateY(-6px);
     }
-
 }
 
 /* =========================
-   MAIN HEADING
+   HEADING
 ========================= */
 
 h1{
-
+    width:100%;
     text-align:center;
 
-    font-size:
-    clamp(28px,6vw,58px);
-
-    line-height:1.1;
-
+    font-size:clamp(28px,8vw,58px);
+    line-height:1.05;
     font-weight:900;
 
-    text-transform:uppercase;
+    margin:0 auto 10px;
 
-    margin-bottom:12px;
+    word-wrap:break-word;
 
     background:
     linear-gradient(
-    90deg,
-    #ffffff,
-    #ffd84a,
-    #ffffff
+        90deg,
+        #fff,
+        #ffd84a,
+        #fff
     );
 
     background-size:200% auto;
 
     -webkit-background-clip:text;
+    background-clip:text;
 
     -webkit-text-fill-color:transparent;
 
-    animation:
-    textShine
-    3s
-    linear
-    infinite;
+    animation:textShine 3s linear infinite;
 }
 
 @keyframes textShine{
-
-    to{
-        background-position:
-        200%
-        center;
+    0%{
+        background-position:0% center;
     }
-
+    100%{
+        background-position:200% center;
+    }
 }
 
 /* =========================
@@ -366,43 +211,35 @@ h1{
 ========================= */
 
 .telegram-user{
-
+    width:100%;
     text-align:center;
 
-    margin:
-    15px
-    auto
-    8px;
+    margin:0 auto 12px;
 
-    font-size:16px;
+    color:#c8d0dc;
 
-    color:#c9d0dd;
+    font-size:14px;
+    line-height:1.5;
 }
 
 .telegram-user a{
-
     color:#00bfff;
-
     font-weight:900;
-
     text-decoration:none;
 
+    display:inline-block;
+
+    padding:2px 4px;
+
     text-shadow:
-    0 0 10px
+    0 0 8px
     rgba(0,191,255,.7);
 
-    transition:
-    .3s;
+    transition:.25s;
 }
 
-.telegram-user a:hover{
-
-    color:#ffffff;
-
-    text-shadow:
-    0 0 20px
-    #00bfff;
-
+.telegram-user a:active{
+    transform:scale(.95);
 }
 
 /* =========================
@@ -410,208 +247,160 @@ h1{
 ========================= */
 
 .subtitle{
-
+    width:100%;
     max-width:700px;
 
-    margin:
-    0
-    auto;
+    margin:0 auto;
+
+    padding:0 5px;
 
     text-align:center;
 
-    color:#c9d0dd;
+    color:#bfc7d4;
 
-    font-size:16px;
-
-    line-height:1.6;
+    font-size:14px;
+    line-height:1.55;
 }
 
 /* =========================
-   JOIN BUTTON
+   JOIN BUTTON AREA
 ========================= */
 
 .join-wrap{
-
-    text-align:center;
-
-    margin:
-    28px
-    0
-    35px;
-}
-
-.join-btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:10px;
-
-    min-width:280px;
-
-    padding:
-    17px
-    30px;
-
-    border-radius:50px;
-
-    text-decoration:none;
-
-    color:#ffffff;
-
-    font-size:18px;
-
-    font-weight:900;
-
-    letter-spacing:.5px;
-
-    background:
-    linear-gradient(
-    135deg,
-    #0088cc,
-    #00aaff
-    );
-
-    border:
-    2px
-    solid
-    rgba(255,255,255,.4);
-
-    box-shadow:
-    0 0 15px
-    rgba(0,170,255,.5),
-
-    0 0 40px
-    rgba(0,170,255,.2);
-
-    transition:
-    .3s;
-
-    animation:
-    buttonGlow
-    2s
-    infinite;
-}
-
-.join-btn:hover{
-
-    transform:
-    translateY(-4px)
-    scale(1.04);
-
-    box-shadow:
-    0 0 30px
-    rgba(0,180,255,.8);
-}
-
-@keyframes buttonGlow{
-
-    0%,100%{
-
-        box-shadow:
-        0 0 15px
-        rgba(0,170,255,.5);
-    }
-
-    50%{
-
-        box-shadow:
-        0 0 35px
-        rgba(0,170,255,.85);
-    }
-
+    width:100%;
+    margin:22px auto 25px;
 }
 
 /* =========================
-   FEATURE CARDS
+   BUTTON
+========================= */
+
+.join-btn{
+    width:100%;
+    max-width:480px;
+    min-height:54px;
+
+    margin:0 auto;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:15px 18px;
+
+    border-radius:50px;
+
+    color:#fff;
+    text-decoration:none;
+
+    font-size:16px;
+    line-height:1.2;
+    font-weight:900;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0077b5,
+        #00aaff
+    );
+
+    border:
+    2px solid
+    rgba(255,255,255,.35);
+
+    box-shadow:
+    0 0 15px
+    rgba(0,170,255,.45);
+
+    animation:buttonPulse 2s infinite;
+
+    transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.join-btn:active{
+    transform:scale(.96);
+}
+
+@keyframes buttonPulse{
+    0%,100%{
+        box-shadow:
+        0 0 12px
+        rgba(0,170,255,.4);
+    }
+
+    50%{
+        box-shadow:
+        0 0 28px
+        rgba(0,170,255,.75);
+    }
+}
+
+/* =========================
+   CARDS
 ========================= */
 
 .cards{
+    width:100%;
 
     display:grid;
 
     grid-template-columns:
-    repeat(3,1fr);
+    repeat(3,minmax(0,1fr));
 
-    gap:18px;
+    gap:12px;
 
-    margin-top:20px;
+    margin-top:5px;
 }
 
 .card{
+    width:100%;
+    min-width:0;
 
-    padding:
-    25px
-    20px;
+    padding:20px 14px;
 
     text-align:center;
 
+    border-radius:18px;
+
     border:
-    1px
-    solid
+    1px solid
     rgba(255,255,255,.1);
 
-    border-radius:20px;
-
     background:
-    linear-gradient(
-    145deg,
-    rgba(255,255,255,.07),
-    rgba(255,255,255,.025)
-    );
-
-    backdrop-filter:
-    blur(12px);
+    rgba(255,255,255,.045);
 
     box-shadow:
-    0 15px
-    35px
+    0 10px 25px
     rgba(0,0,0,.25);
 
-    transition:
-    .35s;
+    transition:.25s;
 }
 
-.card:hover{
-
-    transform:
-    translateY(-8px);
-
-    border-color:
-    rgba(255,210,60,.5);
-
-    box-shadow:
-    0 15px
-    40px
-    rgba(255,193,7,.12);
+.card:active{
+    transform:scale(.98);
 }
 
 .icon{
-
-    font-size:40px;
-
-    margin-bottom:12px;
+    font-size:32px;
+    margin-bottom:8px;
 }
 
 .card h3{
-
     color:#ffd84a;
-
-    font-size:20px;
-
-    margin-bottom:10px;
+    font-size:16px;
+    line-height:1.3;
+    margin-bottom:8px;
 }
 
 .card p{
-
-    color:#bfc6d2;
-
-    font-size:14px;
-
-    line-height:1.6;
+    color:#b9c1cd;
+    font-size:12px;
+    line-height:1.55;
 }
 
 /* =========================
@@ -619,20 +408,18 @@ h1{
 ========================= */
 
 .section{
+    width:100%;
 
-    margin-top:38px;
+    margin-top:25px;
 
-    padding:
-    25px
-    20px;
+    padding:22px 15px;
 
     text-align:center;
 
-    border-radius:22px;
+    border-radius:20px;
 
     border:
-    1px
-    solid
+    1px solid
     rgba(255,255,255,.08);
 
     background:
@@ -640,28 +427,19 @@ h1{
 }
 
 .section h2{
-
-    color:#ffffff;
-
-    font-size:25px;
-
-    margin-bottom:12px;
+    font-size:22px;
+    line-height:1.3;
+    margin-bottom:10px;
 }
 
 .section h2 span{
-
     color:#ffd84a;
 }
 
 .section p{
-
-    color:#c1c7d0;
-
-    line-height:1.7;
-
-    max-width:750px;
-
-    margin:auto;
+    color:#bac2ce;
+    font-size:13px;
+    line-height:1.6;
 }
 
 /* =========================
@@ -669,6 +447,7 @@ h1{
 ========================= */
 
 .tags{
+    width:100%;
 
     display:flex;
 
@@ -676,44 +455,29 @@ h1{
 
     flex-wrap:wrap;
 
-    gap:10px;
+    gap:7px;
 
-    margin-top:20px;
+    margin-top:15px;
 }
 
 .tag{
+    max-width:100%;
 
-    padding:
-    10px
-    16px;
+    padding:8px 11px;
 
     border-radius:30px;
 
-    background:
-    rgba(0,136,204,.12);
-
-    border:
-    1px
-    solid
-    rgba(0,170,255,.35);
-
     color:#8fdcff;
 
-    font-size:13px;
-
-    font-weight:bold;
-
-    transition:
-    .3s;
-}
-
-.tag:hover{
-
-    transform:
-    translateY(-3px);
+    font-size:10px;
+    font-weight:800;
 
     background:
-    rgba(0,170,255,.2);
+    rgba(0,136,204,.1);
+
+    border:
+    1px solid
+    rgba(0,170,255,.3);
 }
 
 /* =========================
@@ -721,25 +485,27 @@ h1{
 ========================= */
 
 .bottom-cta{
+    width:100%;
 
     text-align:center;
 
-    margin-top:35px;
+    margin-top:28px;
 }
 
 .bottom-cta h2{
+    font-size:24px;
+    line-height:1.25;
 
-    font-size:
-    clamp(22px,5vw,36px);
-
-    margin-bottom:10px;
+    margin-bottom:8px;
 }
 
 .bottom-cta p{
+    color:#adb6c3;
 
-    color:#b8c0cd;
+    font-size:13px;
+    line-height:1.5;
 
-    margin-bottom:22px;
+    margin-bottom:17px;
 }
 
 /* =========================
@@ -747,138 +513,164 @@ h1{
 ========================= */
 
 footer{
+    width:100%;
+
+    margin-top:28px;
+    padding-top:17px;
 
     text-align:center;
 
     color:#697383;
 
-    font-size:12px;
-
-    margin-top:35px;
-
-    padding-top:20px;
+    font-size:10px;
+    line-height:1.5;
 
     border-top:
-    1px
-    solid
+    1px solid
     rgba(255,255,255,.06);
 }
 
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
 
-@media(max-width:700px){
+/* ==================================
+   SMALL PHONES
+   320px - 380px
+================================== */
+
+@media(max-width:380px){
 
     .container{
-
         padding:
-        20px
-        14px
-        30px;
+        15px
+        10px
+        25px;
     }
 
     .top-badge{
-
-        font-size:11px;
-
-        padding:
-        8px
-        13px;
+        font-size:9px;
+        padding:7px 10px;
     }
 
     .logo{
-
-        width:
-        min(230px,68vw);
+        width:180px;
     }
 
     h1{
-
-        font-size:31px;
+        font-size:27px;
     }
 
     .telegram-user{
-
-        font-size:14px;
+        font-size:13px;
     }
 
     .subtitle{
-
-        font-size:14px;
-
-        padding:
-        0
-        5px;
+        font-size:13px;
     }
 
     .join-btn{
-
-        width:100%;
-
-        min-width:0;
-
-        font-size:16px;
-
-        padding:
-        16px
-        20px;
+        min-height:50px;
+        font-size:14px;
+        padding:13px;
     }
 
     .cards{
-
         grid-template-columns:1fr;
-
-        gap:13px;
+        gap:10px;
     }
 
     .card{
-
-        padding:
-        20px
-        16px;
+        padding:16px 12px;
     }
 
-    .icon{
-
-        font-size:34px;
+    .card p{
+        font-size:12px;
     }
 
     .section{
-
-        padding:
-        22px
-        15px;
+        padding:18px 12px;
     }
 
     .section h2{
-
-        font-size:21px;
+        font-size:20px;
     }
 
-    .ball{
+    .bottom-cta h2{
+        font-size:21px;
+    }
+}
 
-        opacity:.08;
+
+/* ==================================
+   TABLETS
+================================== */
+
+@media(min-width:600px) and (max-width:900px){
+
+    .container{
+        padding:
+        30px
+        25px
+        45px;
+    }
+
+    .logo{
+        width:260px;
+    }
+
+    h1{
+        font-size:48px;
+    }
+
+    .subtitle{
+        font-size:16px;
+    }
+
+    .join-btn{
+        max-width:400px;
+    }
+
+    .card{
+        padding:24px 16px;
+    }
+
+}
+
+
+/* ==================================
+   DESKTOP
+================================== */
+
+@media(min-width:901px){
+
+    .container{
+        padding-top:35px;
+    }
+
+    .join-btn:hover{
+        transform:
+        translateY(-3px)
+        scale(1.03);
+
+        box-shadow:
+        0 0 35px
+        rgba(0,180,255,.8);
+    }
+
+    .card:hover{
+        transform:
+        translateY(-7px);
+
+        border-color:
+        rgba(255,210,60,.5);
     }
 
 }
 
 </style>
-
 </head>
 
 
 <body>
 
-
-<!-- Floating Cricket Balls -->
-
-<div class="ball ball1"></div>
-
-<div class="ball ball2"></div>
-
-
-<!-- MAIN -->
 
 <div class="container">
 
@@ -886,9 +678,7 @@ footer{
     <!-- TOP BADGE -->
 
     <div class="top-badge">
-
         🏏 WELCOME TO SANJAY SINGH CRICKET TIPS 🏆
-
     </div>
 
 
@@ -898,7 +688,7 @@ footer{
 
         <img
         src="logo(49).jpg"
-        alt="Sanjay Singh Cricket Tips Logo"
+        alt="SANJAY SINGH CRICKET TIPS"
         class="logo">
 
     </div>
@@ -907,15 +697,13 @@ footer{
     <!-- TITLE -->
 
     <h1>
-
         SANJAY SINGH
         <br>
         CRICKET TIPS
-
     </h1>
 
 
-    <!-- CLICKABLE USERNAME -->
+    <!-- TELEGRAM USERNAME -->
 
     <div class="telegram-user">
 
@@ -933,16 +721,13 @@ footer{
     </div>
 
 
-    <!-- SUBTITLE -->
+    <!-- DESCRIPTION -->
 
     <p class="subtitle">
 
-        Cricket lovers ke liye match updates,
+        🏏 Cricket lovers ke liye match updates,
         team analysis aur pre-match insights
         ek hi jagah.
-
-        Stay updated and follow the game
-        with better information.
 
     </p>
 
@@ -964,7 +749,7 @@ footer{
     </div>
 
 
-    <!-- FEATURE CARDS -->
+    <!-- FEATURES -->
 
     <div class="cards">
 
@@ -972,23 +757,17 @@ footer{
         <div class="card">
 
             <div class="icon">
-
                 🏏
-
             </div>
 
             <h3>
-
                 Match Analysis
-
             </h3>
 
             <p>
-
-                Upcoming cricket matches ke
-                important factors, teams aur
-                players ki analysis ke saath updates.
-
+                Upcoming matches ke important
+                factors aur team analysis ke
+                saath cricket updates.
             </p>
 
         </div>
@@ -997,23 +776,16 @@ footer{
         <div class="card">
 
             <div class="icon">
-
                 📊
-
             </div>
 
             <h3>
-
                 Team Updates
-
             </h3>
 
             <p>
-
                 Playing XI, team news aur match
-                se judi latest information ko
-                follow karein.
-
+                se judi latest information.
             </p>
 
         </div>
@@ -1022,23 +794,16 @@ footer{
         <div class="card">
 
             <div class="icon">
-
                 🏆
-
             </div>
 
             <h3>
-
                 Cricket Insights
-
             </h3>
 
             <p>
-
-                Cricket game ko aur closely
-                samajhne ke liye useful pre-match
-                insights aur updates.
-
+                Match se pehle useful cricket
+                insights aur important updates.
             </p>
 
         </div>
@@ -1047,25 +812,17 @@ footer{
     </div>
 
 
-    <!-- INFORMATION SECTION -->
+    <!-- INFORMATION -->
 
     <div class="section">
 
-
         <h2>
-
             🔥
-
             <span>
-
                 WHAT YOU GET
-
             </span>
-
             🔥
-
         </h2>
-
 
         <p>
 
@@ -1077,69 +834,44 @@ footer{
         </p>
 
 
-        <!-- TAGS -->
-
         <div class="tags">
 
-
             <div class="tag">
-
                 🏏 MATCH PREVIEW
-
             </div>
 
-
             <div class="tag">
-
                 📢 TEAM NEWS
-
             </div>
 
-
             <div class="tag">
-
                 📊 MATCH ANALYSIS
-
             </div>
 
-
             <div class="tag">
-
                 🔥 CRICKET UPDATES
-
             </div>
-
 
             <div class="tag">
-
                 🏆 TOURNAMENT NEWS
-
             </div>
-
 
         </div>
-
 
     </div>
 
 
-    <!-- BOTTOM CTA -->
+    <!-- FINAL CTA -->
 
     <div class="bottom-cta">
 
-
         <h2>
-
             🏏 CRICKET LOVERS, READY?
-
         </h2>
 
-
         <p>
-
             Join the community and stay connected
             with the latest cricket updates.
-
         </p>
 
 
@@ -1153,7 +885,6 @@ footer{
 
         </a>
 
-
     </div>
 
 
@@ -1162,7 +893,8 @@ footer{
     <footer>
 
         © 2026 SANJAY SINGH CRICKET TIPS
-        • Cricket Updates & Analysis
+        <br>
+        Cricket Updates & Analysis
 
     </footer>
 
@@ -1171,5 +903,4 @@ footer{
 
 
 </body>
-
 </html>
